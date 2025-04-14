@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaFingerprint } from "react-icons/fa";
 import { HiOutlineChat } from "react-icons/hi";
 import { IoAppsOutline, IoWifiOutline } from "react-icons/io5";
@@ -38,11 +38,6 @@ const FeaturesData = [
 ];
 
 const Features = () => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
   return (
     <section className="pt-16 pb-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="w-[80%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
