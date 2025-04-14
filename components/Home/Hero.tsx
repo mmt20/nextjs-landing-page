@@ -3,22 +3,24 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center bg-pink-800 bg_clip">
+    <section className="relative w-full h-screen flex flex-col justify-center bg-pink-800 dark:bg-gray-900 bg_clip transition-colors duration-300">
       <div className="w-[90%] md:w-[80%] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
         {/* Text Content */}
-        <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold leading-[2.5rem] md:leading-[3.5rem] mt-6 mb-6">
+        <div data-aos="fade-up">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl text-white dark:text-white font-bold leading-[2.5rem] md:leading-[3.5rem] mt-6 mb-6">
             Superior sound, tangible quality
           </h1>
-          <p className="text-xs sm:text-sm md:text-base text-gray-300 font-medium">
+
+          <p className="text-xs sm:text-sm md:text-base text-gray-300 dark:text-gray-400 font-medium">
             Sit back, relax and prepare to experience a new level of audio excellence. These headphones combine
             cutting-edge technology with the finest craftsmanship, for the ultimate listening experience.
           </p>
 
+          {/* Action Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row w-fit sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="#_"
-              className="relative overflow-hidden px-10 py-3 font-medium text-white transition duration-300 bg-blue-600 rounded-md hover:bg-blue-500 ease"
+              className="relative overflow-hidden px-10 py-3 font-medium text-white transition duration-300 bg-blue-600 dark:bg-blue-700 rounded-md hover:bg-blue-500 dark:hover:bg-blue-600"
             >
               <span className="absolute bottom-0 left-0 h-full -ml-2">
                 <svg
@@ -31,7 +33,7 @@ const Hero = () => {
                     fill="#FFF"
                     fillRule="nonzero"
                     fillOpacity=".1"
-                  ></path>
+                  />
                 </svg>
               </span>
               <span className="absolute top-0 right-0 w-12 h-full -mr-3">
@@ -41,7 +43,7 @@ const Hero = () => {
                     fill="#FFF"
                     fillRule="nonzero"
                     fillOpacity=".1"
-                  ></path>
+                  />
                 </svg>
               </span>
               <span className="relative">Buy Now</span>
@@ -49,7 +51,7 @@ const Hero = () => {
 
             <a
               href="#_"
-              className="relative overflow-hidden px-10 py-3 font-medium text-white transition duration-300 bg-green-400 rounded-md hover:bg-green-500 ease"
+              className="relative overflow-hidden px-10 py-3 font-medium text-white transition duration-300 bg-green-400 dark:bg-green-600 rounded-md hover:bg-green-500 dark:hover:bg-green-500"
             >
               <span className="absolute bottom-0 left-0 h-full -ml-2">
                 <svg
@@ -62,7 +64,7 @@ const Hero = () => {
                     fill="#FFF"
                     fillRule="nonzero"
                     fillOpacity=".1"
-                  ></path>
+                  />
                 </svg>
               </span>
               <span className="absolute top-0 right-0 w-12 h-full -mr-3">
@@ -72,17 +74,17 @@ const Hero = () => {
                     fill="#FFF"
                     fillRule="nonzero"
                     fillOpacity=".1"
-                  ></path>
+                  />
                 </svg>
               </span>
-              <span className="relative">Explor More</span>
+              <span className="relative">Explore More</span>
             </a>
           </div>
         </div>
 
         {/* Image Content */}
-        <div className="mx-auto hidden xl:block ">
-          <Image src="/images/hero.png" alt="hero" width={380} height={380} />
+        <div data-aos="zoom-in" data-aos-delay="150" className="mx-auto hidden xl:block">
+          <Image src="/images/hero.png" alt="hero" width={380} height={380} className="dark:brightness-90" />
         </div>
       </div>
     </section>
